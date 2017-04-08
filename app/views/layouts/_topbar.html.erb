@@ -1,0 +1,40 @@
+<div class="navbar navbar-default navbar-fixed-top" id="navbar">
+
+  <div class="navbar-container" id="navbar-container">
+
+	<div class="navbar-header pull-left">
+	  <a href="/" class="navbar-brand" style="padding-top: 10px !important;">
+		<small>
+      <%= Rails.application.config.title %>
+		</small>
+	  </a><!-- /.brand -->
+	</div><!-- /.navbar-header -->
+
+	<div class="navbar-header pull-right" role="navigation">
+	  <ul class="nav ace-nav">
+        <li id="userMenu" class="left">
+			<!-- {{> layout.topbar.tasks}}
+			{{> layout.topbar.notifications}}
+			{{> layout.topbar.messages}}
+			{{> layout.topbar.user_menu}} -->
+			<%#= render :partial => 'layouts/topbar/user_menu' %>
+            <%= javascript_tag do -%>
+                $("#changeLanguageSelect").submit(function(e) {
+                return true;
+                });
+              $('#changeLanguageSelect').change(function() {
+                $( "#changeLanguageForm" ).submit();
+              });
+            <% end %>
+
+          <%= link_to destroy_user_session_path, method: :delete, style: 'float: left;  margin-right: 1em; background-color: transparent;' do %>
+              <i class="glyphicon glyphicon-log-out"></i>
+              Logout
+          <% end %>
+        </li>
+	  </ul><!-- /.ace-nav -->
+	</div><!-- /.navbar-header -->
+
+  </div><!-- /.container -->
+
+</div>

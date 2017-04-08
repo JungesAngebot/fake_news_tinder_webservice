@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	<%= render :partial => 'layouts/header' %>
+	
+	<!-- {{> layout._template.header}} -->
+
+	<body class="skin-1 navbar-fixed">
+    <div id="overlay">
+      <span class="spinner"></span>
+    </div>
+	<%= render :partial => 'layouts/topbar' %>
+	<!-- {{> layout.topbar}} -->
+
+		<div class="main-container" id="main-container">
+		 <div class="main-container-inner">
+
+		 	<%= render :partial => 'layouts/admin/sidenav' %>
+		 <!-- {{> layout.sidenav}} -->
+
+			<div class="main-content">
+				<%#= render :partial => 'layouts/breadcrumbs' %>
+				<!-- {{> layout.breadcrumbs}} -->
+
+				<div class="page-content">
+					<!-- {{^page.no-header}}{{!if no such thing as "no-header", then print header}} -->
+					<div class="page-header">
+						<h1><%= title_by_path(request.path) %> <small><i class="icon-double-angle-right"></i> <%= description_by_path(request.path) %></small></h1>
+					</div><!--/.page-header-->
+					<!-- {{/page.no-header}} -->
+
+					<div class="row">
+                        <%= render partial: "shared/flash" %>
+						<div class="col-xs-12">
+							<%= yield %>
+						</div><!--/.col-->
+					</div><!--/.row-->
+
+				</div><!--/.page-content-->
+
+			</div><!--/.main-content -->
+
+			<!-- {{> layout.settings}} -->
+		 </div><!--/.main-container-inner-->
+
+		 <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="icon-double-angle-up icon-only bigger-110"></i>
+		 </a>
+		</div><!--/.main-container-->
+
+		<!-- {{> layout._template.footer}} -->
+
+	</body>
+</html>

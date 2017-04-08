@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%= render :partial => 'layouts/header' %>
+
+	<body class="login-layout">
+	
+		<div class="main-container">
+			<div class="main-content">
+				<div class="row">
+				 <div class="col-sm-10 col-sm-offset-1">
+
+
+
+						<div class="center">
+						  <img src="/logo.png"/>
+						</div>
+
+
+						<div class="space-6"></div>
+
+
+						<div class="position-relative center">
+							<%= yield %>
+
+						</div><!--/position-relative-->
+
+
+				 </div><!--/.col-->
+				</div><!--/.row-->
+			</div>
+		</div><!--/.main-container-->
+
+<!-- 		{{> layout._template.footer}} -->
+
+	</body>
+</html>

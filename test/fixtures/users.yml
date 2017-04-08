@@ -1,0 +1,53 @@
+
+super_admin:
+  email: superadmin@fluidmobile.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password1') %>
+  admin: 1
+  super_admin: 1
+
+admin:
+  email: admin@fluidmobile.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password1') %>
+  admin: 1
+
+registered_user_1:
+  email: registered1@user.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+
+registered_user_2:
+  email: registered2@user.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+
+registered_user_3:
+  email: registered3@user.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+
+api_params_user_1:
+  email: user_1@api-params.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+  created_at: 2015-01-01 00:00:00
+  updated_at: 2015-01-01 00:00:00
+
+api_params_user_2:
+  email: user_2@api-params.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+  created_at: 2015-01-01 00:00:01
+  updated_at: 2015-01-01 00:00:01
+
+api_params_user_3:
+  email: user_3@api-params.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+  created_at: 2015-01-01 00:00:02
+  updated_at: 2015-01-01 00:00:02
+
+api_params_user_4:
+  email: user_4@api-params.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+  created_at: 2015-01-01 00:00:03
+  updated_at: 2015-01-01 00:00:03
+
+api_params_user_5:
+  email: user_5@api-params.de
+  encrypted_password: <%= User.new.send(:password_digest, 'Password123') %>
+  created_at: 2015-01-01 00:00:02
+  updated_at: 2015-01-01 00:00:02

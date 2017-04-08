@@ -1,0 +1,6 @@
+<div class="nested-fields">
+      <%= f.hidden_field :id, class: "col-xs-12 col-sm-6"%>
+      <%= f.select :area_id, Area.for_users(current_user.supervised_users, current_user).map { |area| ["#{area.name} (#{area.type})", area.id] }, class: "col-xs-12 col-sm-6"%>
+      <%= link_to_remove_association 'remove area', f %>
+    <div class="space-2"></div>
+</div>

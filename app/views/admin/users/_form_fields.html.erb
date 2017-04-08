@@ -1,0 +1,66 @@
+
+<div class="form-group">
+  <%= f.label :email, "#{t('Email')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.text_field :email, class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+<% if current_user.super_admin? %>
+
+<div class="form-group">
+  <%= f.label :password, "#{t('Password')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.password_field :password, class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+<div class="form-group">
+  <%= f.label :password_confirmation, "#{t('Password_confirmation')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.password_field :password_confirmation, class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+<% end %>
+
+<div class="form-group">
+  <%= f.label :first_name, "#{t('First_name')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.text_field :first_name, class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+
+<div class="form-group">
+  <%= f.label :last_name, "#{t('Last_name')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.text_field :last_name, class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+
+<div class="form-group checkbox-group">
+  <%= f.label :admin, "#{t('Admin')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-4">
+    <label>
+      <%= f.check_box :admin, {disabled: current_user.id == f.object.id}  %>
+    </label>
+  </div>
+</div>
+<div class="space-2"></div>

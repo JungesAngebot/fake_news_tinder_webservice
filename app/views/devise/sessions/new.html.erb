@@ -1,0 +1,38 @@
+
+<div class="center" style="width: 400px; margin: auto">
+
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-signin new_user'}) do |f| %>
+          <fieldset>
+            <%= f.label :email, class: 'block clearfix' do %>
+          <span class="block">
+            <%= f.email_field :email, :class => 'form-control', :placeholder => "E-Mail", :autofocus => true %>
+          </span>
+            <% end %>
+
+            <%= f.label :password, class: 'block clearfix' do %>
+          <span class="block">
+            <%= f.password_field :password, :class => 'form-control', :placeholder => 'Passwort' %>
+          </span>
+            <% end %>
+
+            <div class="space"></div>
+
+            <!--<div class="clearfix">-->
+              <!--<% if devise_mapping.rememberable? -%>-->
+                  <!--<%= f.label :remember_me, class: 'inline' do %>-->
+                    <!--<%= f.check_box :remember_me, class: 'ace' %><span class="lbl"> Remember password</span>-->
+                  <!--<% end %>-->
+              <!--<% end -%>-->
+              <%= button_tag type: 'submit', class: 'center btn btn-primary' do %>
+                  Anmelden
+              <% end %>
+            <!--</div>-->
+
+            <div class="space-4"></div>
+
+          </fieldset>
+      <% end %>
+
+
+</div>
+

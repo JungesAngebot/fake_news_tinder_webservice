@@ -1,0 +1,50 @@
+<li id="userMenu" class="">
+	<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+		<%= image_tag avatar_url(current_or_guest_user), class: "nav-user-photo", alt: avatar_alt(current_or_guest_user) %>
+		<span class="user-info">
+			<% unless current_or_guest_user.guest? %>
+				<small><%= t('Welcome') %>,</small> <%= current_or_guest_user.profile.name ? current_or_guest_user.profile.name.split(' ')[0] : t('Guest') %>
+			<% else %>
+				<%= t('Welcome') %>,<br/> <%= t('Guest') %>
+			<% end %>
+		</span>
+		<i class="icon-caret-down"></i>
+	</a>
+	<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+        <% if current_user %>
+
+          <% if current_user.admin? %>
+              <li>
+                <%= link_to(admin_users_path) do %>
+                    <i class="icon-cog"></i> <%= t 'admin' %>
+                <% end %>
+              </li>
+          <% end %>
+
+		  <li class="divider"></li>
+
+        <% end %>
+
+  
+        <% if current_user %>
+
+		  <li>
+			<%= link_to destroy_user_session_path, method: :delete do %>
+				<i class="glyphicon glyphicon-log-out"></i>
+				Logout
+			<% end %>
+		  </li>
+        <% else %>
+          <li>
+            <%= link_to(new_user_session_path) do %>
+                <i class="glyphicon glyphicon-log-in"></i> <%= t 'Login' %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to(new_user_registration_path) do %>
+                <i class="glyphicon glyphicon-edit"></i> <%= t 'Register' %>
+            <% end %>
+          </li>
+        <% end %>
+	</ul>
+</li>

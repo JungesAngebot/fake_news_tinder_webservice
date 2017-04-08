@@ -1,0 +1,17 @@
+<%= form_tag path, :html => {:class => "form-horizontal", :role => 'form'}, :method => :get do %>
+
+	<div class="form-group col-xs-9">
+		  <%= label_tag :search_word, "Search:", :class => "control-label left" %>
+			<%= text_field_tag :search_word, params[:search_word], :class => 'left', :autofocus => true %>
+	</div>
+
+	<div class="col-xs-3">
+		<button class="btn btn-info" type="submit"><i class="icon-ok bigger-110"></i> <%= t 'Search' %></button>
+	</div>
+
+    <% params.each do |param_key, param_value| %>
+        <% next if param_key.to_s.in? %w{search_word action controller utf8} %>
+        <%= hidden_field_tag param_key, param_value %>
+    <% end %>
+
+<% end %>

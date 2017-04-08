@@ -1,0 +1,1135 @@
+{
+  "api_params_processor_test#create": [
+    {
+      "verb": "POST",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": "user[email]=user_added2c35ae211d5b9b542b2933f087121ab4%40api-params.de&user[password]=Password123&format=json",
+      "response_data": {
+        "id": 1056095919,
+        "tombstone": false,
+        "created_at": "2016-04-15T19:56:45.506+02:00",
+        "updated_at": "2016-04-15T19:56:45.506+02:00"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": "user[email]=user_addeda552d8ad126da50375718b482b6f52b7%40api-params.de&user[password]=Password123&format=json",
+      "response_data": {
+        "id": 1056095920,
+        "tombstone": false,
+        "created_at": "2016-04-15T19:56:45.532+02:00",
+        "updated_at": "2016-04-15T19:56:45.532+02:00"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": "user[email]=user_added125225175163a15c16725e520e18b286%40api-params.de&user[password]=Password123&format=json",
+      "response_data": {
+        "id": 1056095921,
+        "tombstone": false,
+        "created_at": "2016-04-15T19:56:45.541+02:00",
+        "updated_at": "2016-04-15T19:56:45.541+02:00"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": "user[email]=user_addedacdb88929934e960a7214e5176a3f96c%40api-params.de&user[password]=Password123&format=json",
+      "response_data": {
+        "id": 1056095922,
+        "tombstone": false,
+        "created_at": "2016-04-15T19:56:45.566+02:00",
+        "updated_at": "2016-04-15T19:56:45.566+02:00"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": "user[email]=user_addedb5b919bf73d06438c5ffbc7b741e534f%40api-params.de&user[password]=Password123&format=json",
+      "response_data": {
+        "id": 1056095923,
+        "tombstone": false,
+        "created_at": "2016-04-15T19:56:45.575+02:00",
+        "updated_at": "2016-04-15T19:56:45.575+02:00"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": "user[email]=user_added0bafbb3008b84d753b52664c37dc8b5b%40api-params.de&user[password]=Password123&format=json",
+      "response_data": {
+        "id": 1056095924,
+        "tombstone": false,
+        "created_at": "2016-04-15T19:56:45.585+02:00",
+        "updated_at": "2016-04-15T19:56:45.585+02:00"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "api_params_processor_test#index": [
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=100&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=100&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=100&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1056095886,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:00.000+01:00",
+          "updated_at": "2015-01-01T01:00:00.000+01:00"
+        },
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        },
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1056095886,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:00.000+01:00",
+          "updated_at": "2015-01-01T01:00:00.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=1&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=2&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=3&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=4&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=2&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1056095886,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:00.000+01:00",
+          "updated_at": "2015-01-01T01:00:00.000+01:00"
+        },
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=2&offset=2&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=2&offset=4&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=3&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1056095886,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:00.000+01:00",
+          "updated_at": "2015-01-01T01:00:00.000+01:00"
+        },
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        },
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=3&offset=3&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=4&offset=0&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1056095886,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:00.000+01:00",
+          "updated_at": "2015-01-01T01:00:00.000+01:00"
+        },
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        },
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=4&offset=4&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=0&since=1420070400&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=1&offset=1&since=1420070400&until=1460743004&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=2&offset=0&since=1420070400&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        },
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=2&offset=2&since=1420070400&until=1460743004&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=3&offset=0&since=1420070400&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        },
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "limit=3&offset=3&since=1420070400&until=1460743004&format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api_params_processor_tests",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1056095886,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:00.000+01:00",
+          "updated_at": "2015-01-01T01:00:00.000+01:00"
+        },
+        {
+          "id": 670822198,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:01.000+01:00",
+          "updated_at": "2015-01-01T01:00:01.000+01:00"
+        },
+        {
+          "id": 966752919,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 285007777,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:02.000+01:00",
+          "updated_at": "2015-01-01T01:00:02.000+01:00"
+        },
+        {
+          "id": 244861446,
+          "tombstone": false,
+          "created_at": "2015-01-01T01:00:03.000+01:00",
+          "updated_at": "2015-01-01T01:00:03.000+01:00"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_base#admin_authenticated_nothing": [
+    {
+      "verb": "GET",
+      "path": "/admin/admin_authenticated_nothing",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_base#authenticated_nothing": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": "401 Unauthorized",
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing.json",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing.json",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": "401 Unauthorized",
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/api_authenticated_nothing",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": "401 Unauthorized",
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_jwt_token#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/jwt_token.json",
+      "versions": [
+        "v1"
+      ],
+      "query": null,
+      "request_data": {
+        "username": "registered1@user.de",
+        "password": "Password123"
+      },
+      "response_data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5MzM0MzMxMjIsImV4cCI6MTQ2MTM0NzgwN30.DV8MfMlO7-0_TB6vAav1v1yCjhjHU0zDG8wMlH_2pSw"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_jwt_token#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/jwt_token",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_jwt_token#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/jwt_token.json",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5MzM0MzMxMjIsImV4cCI6MTQ2MTM0NzgwN30.DV8MfMlO7-0_TB6vAav1v1yCjhjHU0zDG8wMlH_2pSw"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/jwt_token.json",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDU2MDk1OTM3LCJleHAiOjE0NjEzNDc4MDd9.o9CgNTffbNDQ28nm-lbRKlj5qNs-Wv1_ko-WjTUKXpk"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/jwt_token.json",
+      "versions": [
+        "v1"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": "401 Unauthorized",
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_passwords#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/password.json",
+      "versions": [
+        "v1"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "email": "registered1@user.de"
+        }
+      },
+      "response_data": {
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/password.json",
+      "versions": [
+        "v1"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "email": "random_email@example.org"
+        }
+      },
+      "response_data": {
+        "errors": {
+          "email": [
+            "not found"
+          ]
+        }
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_passwords#edit": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/password/edit",
+      "versions": [
+        "v1"
+      ],
+      "query": "reset_password_token=any_token",
+      "request_data": null,
+      "response_data": "<html><body>You are being <a href=\"fmapp://forgot_password?reset_password_token=any_token\">redirected</a>.</body></html>",
+      "code": "302",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_passwords#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/password.json",
+      "versions": [
+        "v1"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "reset_password_token": "5LS5B5_P4f54yhwzPC8h",
+          "password": "NewPassword1",
+          "password_confirmation": "NewPassword1"
+        }
+      },
+      "response_data": null,
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PUT",
+      "path": "/api/v1/password.json",
+      "versions": [
+        "v1"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "reset_password_token": "invalid token",
+          "password": "NewPassword1",
+          "password_confirmation": "NewPassword1"
+        }
+      },
+      "response_data": {
+        "errors": {
+          "reset_password_token": [
+            "is invalid"
+          ]
+        }
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "fm_registrations#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/users.json",
+      "versions": [
+        "v1"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "current_password": "Password123",
+          "password": "NewPassword123",
+          "password_confirmation": "NewPassword123"
+        }
+      },
+      "response_data": null,
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#create": [
+    {
+      "verb": "POST",
+      "path": "/admin/users",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "admin": true,
+          "email": "new_user@example.org",
+          "first_name": null,
+          "last_name": null,
+          "super_admin": false,
+          "password": "Flu1dmob1le1s4wesome",
+          "password_confirmation": "Flu1dmob1le1s4wesome"
+        }
+      },
+      "response_data": "<html><body>You are being <a href=\"http://test.host/admin/users/1056095931/edit\">redirected</a>.</body></html>",
+      "code": "302",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/admin/users/135138680",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": "<html><body>You are being <a href=\"http://test.host/admin/users\">redirected</a>.</body></html>",
+      "code": "302",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#edit": [
+    {
+      "verb": "GET",
+      "path": "/admin/users/135138680/edit",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#index": [
+    {
+      "verb": "GET",
+      "path": "/admin/users",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#new": [
+    {
+      "verb": "GET",
+      "path": "/admin/users/new",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": null,
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#update": [
+    {
+      "verb": "PATCH",
+      "path": "/admin/users/135138680",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "admin": true,
+          "email": "admin@fluidmobile.de",
+          "first_name": null,
+          "last_name": null,
+          "super_admin": false
+        }
+      },
+      "response_data": "<html><body>You are being <a href=\"http://test.host/admin/users/135138680/edit\">redirected</a>.</body></html>",
+      "code": "302",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}

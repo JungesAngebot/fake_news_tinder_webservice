@@ -1,0 +1,39 @@
+# Add application configuration variables here, as shown below.
+
+DATABASE_NAME_PREFIX: 'fluid'
+DEFAULT_PASSWORD: 'Flu1dmob1le1s4wesome'
+GCM_API_KEY: 'password'
+SMTP_USERNAME: 'service@fluidmobile.de'
+SMTP_PASSWORD: 'enter smtp password here'
+APNS_CERTIFICATE_PASSWORD: 'enter_apns_certificate_password_here'
+
+development:
+  SECRET_KEY_BASE: '<%= SecureRandom.hex(64) %>'
+  API_TOKEN: 'a78040a08f04fe7a48d8b93324b7c6e6'
+
+test:
+  SECRET_KEY_BASE: '<%= SecureRandom.hex(64) %>'
+  API_TOKEN: 'a78040a08f04fe7a48d8b93324b7c6e6'
+
+sid:
+  SECRET_KEY_BASE: '<%= SecureRandom.hex(64) %>'
+  API_TOKEN: 'a78040a08f04fe7a48d8b93324b7c6e6'
+  MYSQL_PASSWORD: 'enter_mysql_password_here'
+
+staging:
+  SECRET_KEY_BASE: '<%= SecureRandom.hex(64) %>'
+  API_TOKEN: '<%= SecureRandom.hex %>'
+  MYSQL_PASSWORD: 'enter_mysql_password_here'
+
+production:
+  SECRET_KEY_BASE: '<%= SecureRandom.hex(64) %>'
+  API_TOKEN: '<%= SecureRandom.hex %>'
+  MYSQL_PASSWORD: 'enter_mysql_password_here'
+
+
+
+# File.open(Rails.root.join('config', 'application_gen.yml'), File::RDWR|File::CREAT, 0644) do |f|
+#  f.write(ERB.new(File.read(Rails.root.join('config','application.yml.erb'))).result)
+# end
+
+

@@ -1,0 +1,122 @@
+<a class="menu-toggler" id="menu-toggler" href="#"><span class="menu-text"></span></a>
+
+<div class="sidebar sidebar-fixed" id="sidebar">
+	<script type="text/javascript">
+	try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+	</script>
+	
+	<ul class="nav nav-list">
+
+<!-- 		{{#layout.sidenav_navList}}
+			{{> layout.sidenav.items}}
+		{{/layout.sidenav_navList}} -->
+
+    <li>
+      <%= link_to admin_users_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_users_path) %> </span>
+      <% end %>
+    </li>
+
+
+    <% if current_user.super_admin? %>
+    <% end %>
+
+
+
+
+
+      <% if false %>
+      <!--<li>-->
+        <!--<%= link_to admin_posts_path do %>-->
+          <!--<i class="icon-file"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_posts_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+
+
+      <!--<li>-->
+        <!--<%= link_to admin_programs_path do %>-->
+            <!--<i class="icon-calendar"></i>-->
+            <!--<span class="menu-text"> <%= title_by_path(admin_programs_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+
+      <!--<li>-->
+        <!--<%= link_to admin_locations_path do %>-->
+          <!--<i class="icon-pushpin"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_locations_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+  <!---->
+      <!--<li>-->
+        <!--<%= link_to admin_public_transports_path do %>-->
+          <!--<i class="glyphicon glyphicon-transfer"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_public_transports_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+
+      <!--<li>-->
+          <!--<%= link_to new_admin_notification_path do %>-->
+              <!--<i class="icon-envelope"></i>-->
+              <!--<span class="menu-text"> <%= t('Notifications') %> </span>-->
+          <!--<% end %>-->
+      <!--</li>-->
+
+      <!--<li>-->
+        <!--<%= link_to admin_users_path do %>-->
+          <!--<i class="icon-group"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_users_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+  <!---->
+      <!--<li>-->
+        <!--<%= link_to admin_dashboard_path do %>-->
+          <!--<i class="icon-dashboard"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_dashboard_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+  <!---->
+      <!--<li>-->
+        <!--<%= link_to admin_orders_path do %>-->
+          <!--<i class="icon-truck"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_orders_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+  <!---->
+      <!--<li>-->
+        <!--<%= link_to admin_categories_path do %>-->
+          <!--<i class="icon-bookmark"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_categories_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li>-->
+  <!---->
+      <!--<li>-->
+        <!--<%= link_to admin_products_path do %>-->
+          <!--<i class="icon-barcode"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_products_path) %> </span>-->
+        <!--<%end %>-->
+      <!--</li>-->
+  <!---->
+      <!--&lt;!&ndash; <li>-->
+        <!--<%= link_to admin_preferences_path do %>-->
+          <!--<i class="icon-cogs"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_preferences_path) %> </span>-->
+        <!--<% end %>-->
+      <!--</li> &ndash;&gt;-->
+  <!---->
+      <!--<li>-->
+        <!--<%= link_to admin_import_path do %>-->
+          <!--<i class="icon-download"></i>-->
+          <!--<span class="menu-text"> <%= title_by_path(admin_import_path) %> </span>-->
+        <!--<% end %>-->
+        <!--</li>-->
+		<% end %><!--<#% if false %>-->
+
+	</ul><!--/.nav-list-->
+
+
+	<script type="text/javascript">
+	try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+	</script>
+</div>

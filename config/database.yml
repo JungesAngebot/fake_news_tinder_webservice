@@ -1,0 +1,66 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  username: root
+  password: mongo
+
+development:
+  <<: *default
+  database: <%= Figaro.env.DATABASE_NAME_PREFIX %>
+  socket: /tmp/mysql.sock
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME_PREFIX'] %>_test
+  socket: /tmp/mysql.sock
+
+sid:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME_PREFIX'] %>_sid
+  pool: 25
+  username: <%= ENV['DATABASE_NAME_PREFIX'] %>_sid
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: 127.0.0.1
+
+staging:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME_PREFIX'] %>_stag
+  pool: 25
+  username: <%= ENV['DATABASE_NAME_PREFIX'] %>_stag
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: 127.0.0.1
+
+testing:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME_PREFIX'] %>_test
+  pool: 25
+  username: <%= ENV['DATABASE_NAME_PREFIX'] %>_test
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: 127.0.0.1
+
+#production:
+#  <<: *default
+#  database: <%= ENV['DATABASE_NAME_PREFIX'] %>_prod
+#  pool: 25
+#  username: <%= ENV['DATABASE_NAME_PREFIX'] %>_prod
+#  password: <%= ENV['MYSQL_PASSWORD'] %>
+#  host: 127.0.0.1
+
+production:
+  <<: *default
+  database: <%= ENV['RDS_DB_NAME'] %>
+  pool: 25
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
