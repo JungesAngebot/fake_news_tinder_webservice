@@ -25,9 +25,9 @@
 <div id="topLeiste"></div>
 <div class="progress">
 
-<!--    <div class="progress-bar progress-bar-success" style="width: 35%">
-        <span class="sr-only">35% Complete (success)</span>
-    </div>-->
+    <!--    <div class="progress-bar progress-bar-success" style="width: 35%">
+            <span class="sr-only">35% Complete (success)</span>
+        </div>-->
     <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
         <span class="sr-only">20% Complete (warning)</span>
     </div>
@@ -35,33 +35,57 @@
         <span class="sr-only">10% Complete (danger)</span>
     </div>-->
 </div>
-<div class="container">
+
+<div id="containerStart" class="container" style="display: none">
+    <table><tr><td></td></tr></table>
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-default">Start</button>
+        </div>
+    </div>
+</div>
+
+<div id="containerInformations" class="container">
     <div class="row">
         <div class="col-xs-12">
             <h1>Frage 1</h1>
         </div>
     </div>
+    <div class="col-xs-12" style="height:20px;"></div>
     <div class="row">
         <div class="col-xs-12">
-            <p>Renate Künast hat gesagt "Der traumatisierte Junge Flüchtling hat zwar getötet, man muss ihm aber jetzt trotzdem helfen."</p>
+            <p>Renate Künast hat gesagt "Der traumatisierte Junge Flüchtling hat zwar getötet, man muss ihm aber jetzt
+                trotzdem helfen."</p>
         </div>
     </div>
+    <div class="col-xs-12" style="height:30px;"></div>
     <div class="row">
         <div class="col-xs-12">
             <button type="button" class="btn btn-default">Richtig</button>
             <button type="button" class="btn btn-default">Falsch</button>
         </div>
     </div>
-    <div id="resultText" class="row" style="display: none">
-        <div class="col-xs-12">
-            <p>Als angebliche Quelle für das Zitat wurde die "Süddeutsche Zeitung" genannt. Künast stellte laut
-                "Spiegel" nun Strafanzeige gegen die Macher einer rechtsnationalen Facebook-Seite sowie gegen Unbekannt.
-                Zugleich kritisierte Künast Facebook scharf. Trotz der eindeutigen Sachlage habe es gut drei Tage
-                gedauert, bis der Eintrag verschwunden sei. Fake News müssten künftig "umgehend nach Meldung gelöscht
-                werden", sagte Künast dem Magazin.</p>
+    <div class="col-xs-12" style="height:30px;"></div>
+    <div id="result" style="display: none">
+        <div id="resultText" class="row">
+            <div class="col-xs-12">
+                <p>Als angebliche Quelle für das Zitat wurde die "Süddeutsche Zeitung" genannt. Künast stellte laut
+                    "Spiegel" nun Strafanzeige gegen die Macher einer rechtsnationalen Facebook-Seite sowie gegen
+                    Unbekannt.
+                    Zugleich kritisierte Künast Facebook scharf. Trotz der eindeutigen Sachlage habe es gut drei Tage
+                    gedauert, bis der Eintrag verschwunden sei. Fake News müssten künftig "umgehend nach Meldung
+                    gelöscht
+                    werden", sagte Künast dem Magazin.</p>
+            </div>
+        </div>
+        <div class="col-xs-12" style="height:30px;"></div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="button" class="btn btn-default">Weiter</button>
+            </div>
         </div>
     </div>
-
 
 </div>
 
