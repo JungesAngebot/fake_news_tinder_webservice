@@ -75,7 +75,7 @@ module Admin
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def quiz_params
-        params.require(:quiz).permit(:title)
+        params.require(:quiz).permit(:title, quiz_informations_attributes: [:id, :information_id, :_destroy])
       end
   end
 end
