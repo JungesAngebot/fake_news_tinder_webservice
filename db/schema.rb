@@ -10,9 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413112924) do
+ActiveRecord::Schema.define(version: 20170408152704) do
 
-  create_table "devices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "answer_givens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.integer  "quiz_id"
+    t.integer  "information_id"
+    t.integer  "answer_id"
+    t.boolean  "tombstone",      default: false, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["answer_id"], name: "index_answer_givens_on_answer_id", using: :btree
+    t.index ["information_id"], name: "index_answer_givens_on_information_id", using: :btree
+    t.index ["quiz_id"], name: "index_answer_givens_on_quiz_id", using: :btree
+    t.index ["user_id"], name: "index_answer_givens_on_user_id", using: :btree
+  end
+
+  create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "text"
+    t.integer  "information_type_id"
+    t.boolean  "tombstone",           default: false, null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["information_type_id"], name: "index_answers_on_information_type_id", using: :btree
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.boolean  "tombstone",  default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "devices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "uuid"
     t.string   "notification_token"
     t.integer  "user_id"
@@ -34,14 +64,64 @@ ActiveRecord::Schema.define(version: 20160413112924) do
     t.index ["user_id"], name: "index_devices_on_user_id", using: :btree
   end
 
-  create_table "rpush_apps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "information", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "challenge_text",      limit: 65535
+    t.text     "result_text",         limit: 65535
+    t.integer  "information_type_id"
+    t.string   "source_link"
+    t.integer  "correct_answer_id"
+    t.integer  "category_id"
+    t.boolean  "tombstone",                         default: false, null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.index ["category_id"], name: "index_information_on_category_id", using: :btree
+    t.index ["correct_answer_id"], name: "index_information_on_correct_answer_id", using: :btree
+    t.index ["information_type_id"], name: "index_information_on_information_type_id", using: :btree
+  end
+
+  create_table "information_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.boolean  "tombstone",  default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "memes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image_url"
+    t.integer  "category_id"
+    t.float    "min_correct_including", limit: 24
+    t.float    "max_correct_excluding", limit: 24
+    t.boolean  "tombstone",                        default: false, null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.index ["category_id"], name: "index_memes_on_category_id", using: :btree
+  end
+
+  create_table "quiz_informations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "quiz_id"
+    t.integer  "information_id"
+    t.boolean  "tombstone",      default: false, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["information_id"], name: "index_quiz_informations_on_information_id", using: :btree
+    t.index ["quiz_id"], name: "index_quiz_informations_on_quiz_id", using: :btree
+  end
+
+  create_table "quizzes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.boolean  "tombstone",  default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "rpush_apps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                              null: false
     t.string   "environment"
     t.text     "certificate",             limit: 65535
     t.string   "password"
     t.integer  "connections",                           default: 1, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
     t.string   "type",                                              null: false
     t.string   "auth_key"
     t.string   "client_id"
@@ -50,16 +130,16 @@ ActiveRecord::Schema.define(version: 20160413112924) do
     t.datetime "access_token_expiration"
   end
 
-  create_table "rpush_feedback", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "rpush_feedback", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "device_token", limit: 64, null: false
     t.datetime "failed_at",               null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "app_id"
     t.index ["device_token"], name: "index_rpush_feedback_on_device_token", using: :btree
   end
 
-  create_table "rpush_notifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "rpush_notifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "badge"
     t.string   "device_token",      limit: 64
     t.string   "sound",                              default: "default"
@@ -73,8 +153,8 @@ ActiveRecord::Schema.define(version: 20160413112924) do
     t.integer  "error_code"
     t.text     "error_description", limit: 65535
     t.datetime "deliver_after"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
     t.boolean  "alert_is_json",                      default: false
     t.string   "type",                                                   null: false
     t.string   "collapse_key"
@@ -88,11 +168,10 @@ ActiveRecord::Schema.define(version: 20160413112924) do
     t.integer  "priority"
     t.text     "url_args",          limit: 65535
     t.string   "category"
-    t.index ["app_id", "delivered", "failed", "deliver_after"], name: "index_rapns_notifications_multi", using: :btree
     t.index ["delivered", "failed"], name: "index_rpush_notifications_multi", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "first_name"
@@ -112,4 +191,15 @@ ActiveRecord::Schema.define(version: 20160413112924) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "answer_givens", "answers"
+  add_foreign_key "answer_givens", "information"
+  add_foreign_key "answer_givens", "quizzes"
+  add_foreign_key "answer_givens", "users"
+  add_foreign_key "answers", "information_types"
+  add_foreign_key "information", "answers", column: "correct_answer_id"
+  add_foreign_key "information", "categories"
+  add_foreign_key "information", "information_types"
+  add_foreign_key "memes", "categories"
+  add_foreign_key "quiz_informations", "information"
+  add_foreign_key "quiz_informations", "quizzes"
 end

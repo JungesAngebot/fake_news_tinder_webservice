@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  quiz: one
+  information: one
+  answer: one
+  tombstone: false
+
+two:
+  user: two
+  quiz: two
+  information: two
+  answer: two
+  tombstone: false

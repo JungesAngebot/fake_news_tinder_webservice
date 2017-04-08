@@ -1,0 +1,2 @@
+class InformationType < ApplicationRecord
+end

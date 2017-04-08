@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_url: MyString
+  category: one
+  min_correct_including: 1.5
+  max_correct_excluding: 1.5
+  tombstone: false
+
+two:
+  image_url: MyString
+  category: two
+  min_correct_including: 1.5
+  max_correct_excluding: 1.5
+  tombstone: false
