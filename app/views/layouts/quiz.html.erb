@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title><%= Rails.application.config.title %></title>
+
+  <%= stylesheet_link_tag    "application_quiz", media: "all", "data-turbolinks-track" => true %>
+
+  <script type="text/javascript">
+      // hack
+      $assets = "assets";
+  </script>
+
+  <!--[if !IE]> -->
+  <script type="text/javascript">
+      $assets = "assets";
+      window.jQuery || document.write("<script src='/jquery-2.1.3.min.js?body=1'>"+"<"+"/script>");
+  </script>
+  <!-- <![endif]-->
+
+  <!--[if IE]>
+  <script type="text/javascript">
+    window.jQuery || document.write("<script src='/jquery-1.10.2.min.js?body=1'>"+"<"+"/script>");
+  </script>
+  <![endif]-->
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <!--[if lte IE 8]>
+    <%= javascript_include_tag "application-ie", "data-turbolinks-track" => true %>
+  <![endif]-->
+
+  <script type="text/javascript">
+      if("ontouchend" in document) document.write("<script src='/jquery.mobile.custom.min.js?body=1'>"+"<"+"/script>");
+  </script>
+  <%= csrf_meta_tags %>
+
+
+</head>
+
+<body>
+  <%= yield %>
+</body>
+</html>

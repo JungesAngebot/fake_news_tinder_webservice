@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'quiz/quiz'
+
   namespace :api do
     namespace :v1 do
       # only read
@@ -45,6 +47,8 @@ Rails.application.routes.draw do
     get 'admin_authenticated_nothing' => 'fm_base#admin_authenticated_nothing'
     get '/' => 'fm_base#admin_authenticated_nothing', as: 'root'
   end
+
+  get 'quiz' => 'quiz#quiz'
 
   authenticate :user, lambda {|u| u.admin? || u.super_admin? } do
     apipie
