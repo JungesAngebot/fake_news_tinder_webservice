@@ -7,14 +7,14 @@ rails generate model answer text information_type:references tombstone:boolean
 rails generate model answer_given user:references quiz:references information:references answer:references tombstone:boolean
 rails generate model meme image_url category:references min_correct_including:float max_correct_excluding:float tombstone:boolean
 
-rails d fm_api_scaffold_controller quiz --api-version v1
-rails d fm_api_scaffold_controller category --api-version v1
-rails d fm_api_scaffold_controller information_type --api-version v1
-rails d fm_api_scaffold_controller answer --api-version v1
-rails d fm_api_scaffold_controller information --api-version v1
-rails d fm_api_scaffold_controller quiz_information --api-version v1
-rails d fm_api_scaffold_controller meme --api-version v1
-rails d fm_api_scaffold_controller answer_given --api-version v1
+rails g fm_api_scaffold_controller quiz --api-version v1
+rails g fm_api_scaffold_controller category --api-version v1
+rails g fm_api_scaffold_controller information_type --api-version v1
+rails g fm_api_scaffold_controller answer --api-version v1
+rails g fm_api_scaffold_controller information --api-version v1
+rails g fm_api_scaffold_controller quiz_information --api-version v1
+rails g fm_api_scaffold_controller meme --api-version v1
+rails g fm_api_scaffold_controller answer_given --api-version v1
 
 rails generate fm_scaffold_controller quiz
 rails generate fm_scaffold_controller category

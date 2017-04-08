@@ -1,8 +1,8 @@
 # config valid only for Capistrano 3.2.1
 lock '3.6.1'
 
-set :application, 'fluidmobile'
-set :repo_url, 'git@bitbucket.org:fluidmobile/fm_webservice.git'
+set :application, 'fakenewsquiz'
+set :repo_url, 'https://github.com/JungesAngebot/fake_news_tinder_webservice.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
