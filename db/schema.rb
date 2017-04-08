@@ -64,7 +64,14 @@ ActiveRecord::Schema.define(version: 20170408152704) do
     t.index ["user_id"], name: "index_devices_on_user_id", using: :btree
   end
 
-  create_table "information", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "information_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.boolean  "tombstone",  default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "informations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "challenge_text",      limit: 65535
     t.text     "result_text",         limit: 65535
     t.integer  "information_type_id"
@@ -74,16 +81,9 @@ ActiveRecord::Schema.define(version: 20170408152704) do
     t.boolean  "tombstone",                         default: false, null: false
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
-    t.index ["category_id"], name: "index_information_on_category_id", using: :btree
-    t.index ["correct_answer_id"], name: "index_information_on_correct_answer_id", using: :btree
-    t.index ["information_type_id"], name: "index_information_on_information_type_id", using: :btree
-  end
-
-  create_table "information_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title"
-    t.boolean  "tombstone",  default: false, null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.index ["category_id"], name: "index_informations_on_category_id", using: :btree
+    t.index ["correct_answer_id"], name: "index_informations_on_correct_answer_id", using: :btree
+    t.index ["information_type_id"], name: "index_informations_on_information_type_id", using: :btree
   end
 
   create_table "memes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -192,14 +192,14 @@ ActiveRecord::Schema.define(version: 20170408152704) do
   end
 
   add_foreign_key "answer_givens", "answers"
-  add_foreign_key "answer_givens", "information"
+  add_foreign_key "answer_givens", "informations"
   add_foreign_key "answer_givens", "quizzes"
   add_foreign_key "answer_givens", "users"
   add_foreign_key "answers", "information_types"
-  add_foreign_key "information", "answers", column: "correct_answer_id"
-  add_foreign_key "information", "categories"
-  add_foreign_key "information", "information_types"
+  add_foreign_key "informations", "answers", column: "correct_answer_id"
+  add_foreign_key "informations", "categories"
+  add_foreign_key "informations", "information_types"
   add_foreign_key "memes", "categories"
-  add_foreign_key "quiz_informations", "information"
+  add_foreign_key "quiz_informations", "informations"
   add_foreign_key "quiz_informations", "quizzes"
 end

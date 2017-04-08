@@ -1,6 +1,6 @@
-class CreateInformation < ActiveRecord::Migration[5.0]
+class CreateInformations < ActiveRecord::Migration[5.0]
   def change
-    create_table :information do |t|
+    create_table :informations do |t|
       t.text :challenge_text
       t.text :result_text
       t.references :information_type, foreign_key: true

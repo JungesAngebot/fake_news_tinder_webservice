@@ -24,6 +24,13 @@ Rails.application.routes.draw do
 
   # admin
   namespace :admin do
+    resources :quizzes
+    resources :categories
+    resources :information_types
+    resources :answers
+    resources :informations
+    resources :quiz_informations
+    resources :memes
     resources :users
 
     # special

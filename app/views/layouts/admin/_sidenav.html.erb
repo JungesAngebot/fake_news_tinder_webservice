@@ -10,6 +10,49 @@
 <!-- 		{{#layout.sidenav_navList}}
 			{{> layout.sidenav.items}}
 		{{/layout.sidenav_navList}} -->
+    <li>
+      <%= link_to admin_quizzes_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_quizzes_path) %> </span>
+      <% end %>
+    </li>
+
+    <li>
+      <%= link_to admin_categories_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_categories_path) %> </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_information_types_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_information_types_path) %> </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_answers_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_answers_path) %> </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_informations_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_informations_path) %> </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_quiz_informations_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_quiz_informations_path) %> </span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_memes_path do %>
+          <i class="icon-user"></i>
+          <span class="menu-text"> <%= title_by_path(admin_memes_path) %> </span>
+      <% end %>
+    </li>
 
     <li>
       <%= link_to admin_users_path do %>

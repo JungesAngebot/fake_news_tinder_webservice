@@ -1,7 +1,7 @@
 rails generate model quiz title tombstone:boolean
 rails generate model category title tombstone:boolean
 rails generate model information_type title tombstone:boolean
-rails generate model information challenge_text:text result_text:text information_type:references source_link correct_answer:references category:references tombstone:boolean
+rails d model information challenge_text:text result_text:text information_type:references source_link correct_answer:references category:references tombstone:boolean
 rails generate model quiz_information quiz:references information:references tombstone:boolean
 rails generate model answer text information_type:references tombstone:boolean
 rails generate model answer_given user:references quiz:references information:references answer:references tombstone:boolean
