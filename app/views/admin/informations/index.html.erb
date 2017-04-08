@@ -20,7 +20,6 @@
             <th>Source link</th>
             <th>Correct answer</th>
             <th>Category</th>
-            <th>Tombstone</th>
             <th>Created at</th>
             <th>Updated at</th>
             <th>Actions</th>
@@ -33,18 +32,15 @@
                     <td><%= information.id %></td>
                     <td><%= information.challenge_text %></td>
                     <td><%= information.result_text %></td>
-                    <td><%= information.information_type_id %></td>
+                    <td><%= "#{information.information_type.title} (#{information.information_type_id})" %></td>
                     <td><%= information.source_link %></td>
-                    <td><%= information.correct_answer_id %></td>
-                    <td><%= information.category_id %></td>
-                    <td><%= information.tombstone %></td>
+                    <td><%= "#{information.correct_answer.text} (#{information.correct_answer_id})" %></td>
+                    <td><%= "#{information.category.title} (#{information.category_id})" %></td>
                     <td><%= information.created_at %></td>
                     <td><%= information.updated_at %></td>
                     <td>
                 <div class='visible-md visible-lg hidden-sm hidden-xs btn-group'>
-                  <%= link_to admin_information_path(information) do %>
-                    <button class='btn btn-xs btn-success'><i class='icon-zoom-in bigger-120'></i></button>
-                  <% end %>
+
                   <%= link_to edit_admin_information_path(information) do %>
                     <button class='btn btn-xs btn-info'><i class='icon-edit bigger-120'></i></button>
                   <% end %>
@@ -57,11 +53,7 @@
                   <div class="inline position-relative">
                     <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-only bigger-110"></i></button>
                     <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-                      <li>
-                        <%= link_to admin_information_path(information), :class => "tooltip-info" do %>
-                          <span class="blue"><i class="icon-zoom-in bigger-120"></i></span>
-                        <% end %>
-                      </li>
+
                       <li>
                         <%= link_to edit_admin_information_path(information), :class => "tooltip-success" do %>
                           <span class="green"><i class="icon-edit bigger-120"></i></span>

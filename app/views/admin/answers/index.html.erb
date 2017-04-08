@@ -16,7 +16,6 @@
             <th>Id</th>
             <th>Text</th>
             <th>Information type</th>
-            <th>Tombstone</th>
             <th>Created at</th>
             <th>Updated at</th>
             <th>Actions</th>
@@ -28,15 +27,11 @@
             <tr>
                     <td><%= answer.id %></td>
                     <td><%= answer.text %></td>
-                    <td><%= answer.information_type_id %></td>
-                    <td><%= answer.tombstone %></td>
+                    <td><%= "#{answer.information_type.title} (#{answer.information_type_id})" %></td>
                     <td><%= answer.created_at %></td>
                     <td><%= answer.updated_at %></td>
                     <td>
                 <div class='visible-md visible-lg hidden-sm hidden-xs btn-group'>
-                  <%= link_to admin_answer_path(answer) do %>
-                    <button class='btn btn-xs btn-success'><i class='icon-zoom-in bigger-120'></i></button>
-                  <% end %>
                   <%= link_to edit_admin_answer_path(answer) do %>
                     <button class='btn btn-xs btn-info'><i class='icon-edit bigger-120'></i></button>
                   <% end %>
@@ -49,11 +44,6 @@
                   <div class="inline position-relative">
                     <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-only bigger-110"></i></button>
                     <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-                      <li>
-                        <%= link_to admin_answer_path(answer), :class => "tooltip-info" do %>
-                          <span class="blue"><i class="icon-zoom-in bigger-120"></i></span>
-                        <% end %>
-                      </li>
                       <li>
                         <%= link_to edit_admin_answer_path(answer), :class => "tooltip-success" do %>
                           <span class="green"><i class="icon-edit bigger-120"></i></span>

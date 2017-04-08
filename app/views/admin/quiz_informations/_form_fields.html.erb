@@ -3,7 +3,7 @@
   <%= f.label :id, "#{t('Id')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
   <div class="col-xs-12 col-sm-9">
     <div class="clearfix">
-      <%= f.text_field :id, class: "col-xs-12 col-sm-6"%>
+      <%= f.text_field :id, disabled: true , class: "col-xs-12 col-sm-6"%>
     </div>
   </div>
 </div>
@@ -14,7 +14,7 @@
   <%= f.label :quiz_id, "#{t('Quiz')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
   <div class="col-xs-12 col-sm-9">
     <div class="clearfix">
-      <%= f.text_field :quiz_id, class: "col-xs-12 col-sm-6"%>
+      <%= f.select :quiz_id, Quiz.all.map { |quiz| [quiz.title, quiz.id] }, include_blank: true, class: "col-xs-12 col-sm-6"%>
     </div>
   </div>
 </div>
@@ -25,9 +25,8 @@
   <%= f.label :information_id, "#{t('Information')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
   <div class="col-xs-12 col-sm-9">
     <div class="clearfix">
-      <%= f.text_field :information_id, class: "col-xs-12 col-sm-6"%>
+      <%= f.select :information_id, Information.all.map { |information| [information.challenge_text, information.id] }, include_blank: true, class: "col-xs-12 col-sm-6"%>
     </div>
   </div>
 </div>
 <div class="space-2"></div>
-
