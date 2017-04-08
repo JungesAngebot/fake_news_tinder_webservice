@@ -10,8 +10,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-
-  margin: 0 auto;
+  margin: 0;
 }
 article,
 aside,
@@ -4957,8 +4956,6 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  display: block;
-  margin: auto;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
