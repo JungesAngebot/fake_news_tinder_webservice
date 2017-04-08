@@ -1,0 +1,89 @@
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    width: 500px !important;
+}
+
+/*Designfestlegung der DIV-Boxen (Grundstruktur)----------------------------------------*/
+
+#topLeiste {
+    width: auto;
+    height: 50px;
+    margin: 0 auto;      /* standardkonforme horizontale Zentrierung */
+    background-color: #71c0a4;
+}
+
+#details {
+    height: 1000px;
+    width: auto;
+    margin: auto;
+
+}
+
+#endLeiste {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: auto;      /* standardkonforme horizontale Zentrierung */
+    border: 1px solid;
+    background-color: #71c0a4;
+    border: 0px;
+}
+
+
+
+/*Detail---------------------------------------------------------------------------------------------------*/
+
+.btnWahr {
+    -webkit-border-radius: 60;
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 24px;
+    background: #00f500;
+    padding: 35px 16px 25px 0px;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.btnFalsch {
+
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 24px;
+    background: #f50000;
+    padding: 35px 16px 25px 0px;
+    text-decoration: none;
+}
+
+.style-Textbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right:10px;
+    margin-left:10px;
+    height:20px;
+    width: 150px;
+}
+
+/*# sourceMappingURL=bootstrap.css.map */
