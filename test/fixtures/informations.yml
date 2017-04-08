@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  challenge_text: MyText
+  result_text: MyText
+  information_type: one
+  source_link: MyString
+  correct_answer: one
+  category: one
+  tombstone: false
+
+two:
+  challenge_text: MyText
+  result_text: MyText
+  information_type: two
+  source_link: MyString
+  correct_answer: two
+  category: two
+  tombstone: false

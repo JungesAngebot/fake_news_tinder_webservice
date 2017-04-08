@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= render :partial => 'shared/simple_search', :locals => { path: admin_quiz_informations_path} %>
+  </div>
+
+
+  <div class="col-md-offset-4 col-md-2 top-action">
+    <%= link_to content_tag(:span, '', :class => %w(glyphicon glyphicon-plus)).html_safe + content_tag(:span, " #{t('New')} #{t('Quiz_information')}", :class => "action-label").html_safe, new_admin_quiz_information_path, :class => %w(btn btn-primary btn-block) %>
+  </div>
+
+  <div class="col-xs-12">
+    <div class="table-responsive">
+      <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Quiz</th>
+            <th>Information</th>
+            <th>Tombstone</th>
+            <th>Created at</th>
+            <th>Updated at</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @quiz_informations.each do |quiz_information| %>
+            <tr>
+                    <td><%= quiz_information.id %></td>
+                    <td><%= quiz_information.quiz_id %></td>
+                    <td><%= quiz_information.information_id %></td>
+                    <td><%= quiz_information.tombstone %></td>
+                    <td><%= quiz_information.created_at %></td>
+                    <td><%= quiz_information.updated_at %></td>
+                    <td>
+                <div class='visible-md visible-lg hidden-sm hidden-xs btn-group'>
+                  <%= link_to admin_quiz_information_path(quiz_information) do %>
+                    <button class='btn btn-xs btn-success'><i class='icon-zoom-in bigger-120'></i></button>
+                  <% end %>
+                  <%= link_to edit_admin_quiz_information_path(quiz_information) do %>
+                    <button class='btn btn-xs btn-info'><i class='icon-edit bigger-120'></i></button>
+                  <% end %>
+                  <%= link_to admin_quiz_information_path(quiz_information), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <button class='btn btn-xs btn-danger'><i class='icon-trash bigger-120'></i></button>
+                  <% end %>
+                </div>
+
+                <div class='visible-xs visible-sm hidden-md hidden-lg'>
+                  <div class="inline position-relative">
+                    <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-only bigger-110"></i></button>
+                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
+                      <li>
+                        <%= link_to admin_quiz_information_path(quiz_information), :class => "tooltip-info" do %>
+                          <span class="blue"><i class="icon-zoom-in bigger-120"></i></span>
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to edit_admin_quiz_information_path(quiz_information), :class => "tooltip-success" do %>
+                          <span class="green"><i class="icon-edit bigger-120"></i></span>
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to admin_quiz_information_path(quiz_information), method: :delete, data: { confirm: 'Are you sure?' }, :class => "tooltip-error" do %>
+                          <span class="red"><i class="icon-trash bigger-120"></i></span>
+                        <% end %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div><!--/.table-responsive-->
+  </div><!--/span-->
+</div><!--/row-->
+
+

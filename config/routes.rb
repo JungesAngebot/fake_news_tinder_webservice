@@ -3,8 +3,16 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       # only read
+      resources :quizzes
+      resources :categories
+      resources :information_types
+      resources :answers
+      resources :informations
+      resources :quiz_informations
+      resources :memes
 
       # read / write
+      resources :answer_givens
 
       # special
       # devise_for :users, controllers: { sessions: 'api/v1/sessions'}, only: 'sessions'

@@ -11,7 +11,7 @@ rails g fm_api_scaffold_controller quiz --api-version v1
 rails g fm_api_scaffold_controller category --api-version v1
 rails g fm_api_scaffold_controller information_type --api-version v1
 rails g fm_api_scaffold_controller answer --api-version v1
-rails g fm_api_scaffold_controller information --api-version v1
+rails d fm_api_scaffold_controller information --api-version v1
 rails g fm_api_scaffold_controller quiz_information --api-version v1
 rails g fm_api_scaffold_controller meme --api-version v1
 rails g fm_api_scaffold_controller answer_given --api-version v1
@@ -20,8 +20,8 @@ rails generate fm_scaffold_controller quiz
 rails generate fm_scaffold_controller category
 rails generate fm_scaffold_controller information_type
 rails generate fm_scaffold_controller answer
-rails generate fm_scaffold_controller information
+rails d fm_scaffold_controller information
 rails generate fm_scaffold_controller quiz_information
 rails generate fm_scaffold_controller meme
-rails generate fm_scaffold_controller answer_given
+rails d fm_scaffold_controller answer_given
 
