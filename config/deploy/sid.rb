@@ -4,7 +4,7 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-set :domain, 'fakenewsquiz.fluidmobile.de'
+set :domain, 'fakenewsquiz-sid.fluidmobile.de'
 
 role :web, fetch(:domain)                          # Your HTTP server, Apache/etc
 role :app, fetch(:domain)                         # This may be the same as your `Web` server
@@ -25,7 +25,7 @@ set :deploy_to, -> { '/var/www/fake_news_quiz_webservice/sid/' }
 set :branch, 'develop'
 set :rails_env, 'sid'
 
-set :rvm_ruby_version, '2.3-latest@fake_news_quiz_webservice_sid'
+set :rvm_ruby_version, '2.3.3-latest@fake_news_quiz_webservice_sid'
 
 
 # you can set custom ssh options

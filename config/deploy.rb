@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.2.1
-lock '3.6.1'
+lock '3.7.1'
 
 set :application, 'fakenewsquiz'
 set :repo_url, 'https://github.com/JungesAngebot/fake_news_tinder_webservice.git'
@@ -34,11 +34,11 @@ set :scm, :git
 # Default value for keep_releases is 5
 set :keep_releases, 10
 
-set :ssh_options, {
-    keys: %w(~/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(publickey)
-}
+# set :ssh_options, {
+#     keys: %w(~/.ssh/id_rsa),
+#     forward_agent: false,
+#     auth_methods: %w(publickey)
+# }
 
 set :stages, ['sid', 'staging', 'production']
 
