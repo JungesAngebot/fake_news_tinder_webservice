@@ -22,7 +22,7 @@ server fetch(:domain),
        port: 22248
 
 set :deploy_to, -> { '/var/www/fake_news_quiz_webservice/sid/' }
-set :branch, 'develop'
+set :branch, 'develop_christoph'
 set :rails_env, 'sid'
 
 set :rvm_ruby_version, '2.3.3-latest@fake_news_quiz_webservice_sid'

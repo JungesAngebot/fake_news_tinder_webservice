@@ -3,14 +3,18 @@ $(document).ready(function() {
     var informationIndex = 0;
 
     function switchToNextInformation() {
-        var information = quiz_json.informations[informationIndex++];
+        var information = quiz_json.informations[informationIndex];
         if(!information) {
             $("#containerInformations").hide();
             $("#containerFinish").show();
         } else {
             $('#challengeText').html(information.challenge_text);
             $('#resultText').html(information.result_text);
+            $('#informationCount').html("Frage " + (informationIndex + 1));
+            var progress = informationIndex / quiz_json.informations.length * 100;
+            $(".progress-bar").css("width", progress + "%");
         }
+        informationIndex++;
 
     }
 
