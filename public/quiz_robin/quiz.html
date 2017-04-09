@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/quiz_robin.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+    <script src="../js/jquery2.js"></script>
+    <script src="../js/quiz_robin.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<script type="application/javascript">
+    var quiz_json = JSON.parse('{\"id\":1,\"title\":\"Erstes Quiz\",\"informations\":[{\"id\":2,\"challenge_text\":\"Renate Künast hat gesagt \\\"Der traumatisierte Junge Flüchtling hat zwar getötet, man muss ihm aber jetzt trotzdem helfen.\\\"\",\"result_text\":\"Als angebliche Quelle für das Zitat wurde die \\\"Süddeutsche Zeitung\\\" genannt. Künast stellte laut \\\"Spiegel\\\" nun Strafanzeige gegen die Macher einer rechtsnationalen Facebook-Seite sowie gegen Unbekannt.\\r\\nZugleich kritisierte Künast Facebook scharf. Trotz der eindeutigen Sachlage habe es gut drei Tage gedauert, bis der Eintrag verschwunden sei. Fake News müssten künftig \\\"umgehend nach Meldung gelöscht werden\\\", sagte Künast dem Magazin.\",\"source_link\":\"https://www.tagesschau.de/inland/kuenast-strafanzeige-101.html\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":2,\"text\":\"Falsch\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":3,\"challenge_text\":\" Putin gibt überraschend Manipulation zu: \\\"Die US-Wahl muss wiederholt werden\\\"\",\"result_text\":\"Geile Idee, kann ja eigentlich nur vom Postillion sein :)\\r\\nDie US-Geheimdienste behaupten zwar, Putin habe den Wahlkampf in den USA beeinflusst, aber in welcher Welt würde der russische Präsident sowas zugeben?\",\"source_link\":\"https://www.tagesschau.de/ausland/us-wahl-russland-101.html\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":2,\"text\":\"Falsch\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":4,\"challenge_text\":\"Es gibt eine Barbie-Puppe, die Angela Merkel nachempfunden ist.\",\"result_text\":\"Beunruhigend, aber wahr. Bundeskanzlerin Angela Merkel gibt es nun auch als Barbie-Puppe. Die Kanzlerin diente als Vorlage für eine speziell angefertigte \\\"Ehrenbarbie\\\", wie Mattel-Sprecherin Stephanie Wegener erläutert:\\r\\n\\\"Über Politik lässt sich sicherlich streiten, aber dass wir in Deutschland eine Frau als Bundeskanzlerin haben, ist für andere Länder sicher was Besonderes.\\\" Die Sonderanfertigung im schwarzen Hosenanzug mit Merkels typischer Frisur steht hinter einem Rednerpult, hinter ihr wehen die Deutschlandfahne und die Fahne des Herstellers Mattel.\",\"source_link\":\"http://www.spiegel.de/politik/deutschland/ehrenanfertigung-merkel-als-barbie-puppe-a-606544.html\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":1,\"text\":\"Richtig\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":5,\"challenge_text\":\"Moslem reist Toilette aus der Wand und wirft sie aus dem Fenster, vorher saß ein “Ungläubiger” drauf. \",\"result_text\":\"Spätestens seit Mitte des vergangenen Jahres ist zu beobachten, dass zunehmend Gerüchte über Asylsuchende in die Welt gesetzt und viral verbreitet werden. Von gewilderten Schwänen und geschändeten Gräbern - auf Hoaxmap.org werden sie gesammelt.\",\"source_link\":\"Hoaxmap.org\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":2,\"text\":\"Falsch\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":6,\"challenge_text\":\"Jeder EU-Bürger kann beim EU-Bürgerbeauftragten Beschwerde einreichen, die meisten Beschwerden kommen aus Deutschland. \",\"result_text\":\"Als die Europäische Union 1992 das Amt des Ombudsmanns des Europäischen Parlaments schuf, orientierte sie sich am schwedischen Vorbild. Dort schützen die Ombudsmänner die Rechte des einzelnen Bürgers beim Umgang mit den Behörden. Der Bürgerbeauftragte des Europäischen Parlaments kümmert sich nur um Beschwerden, die die europäischen Behörden betreffen. \",\"source_link\":\"http://ec.europa.eu/atwork/applying-eu-law/complaints_de.htm\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":1,\"text\":\"Richtig\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":7,\"challenge_text\":\"Erdogan verbrachte 1999 wegen Volksverhetzung vier Monate im Gefängnis.\",\"result_text\":\"Eigentlich müsste der türkische Staatspräsident Recep Tayyip Erdogan mit TV-Moderator Jan Böhmermann fühlen: Erdogan hatte nämlich selbst einmal juristischen Ärger wegen eines Gedichts.\\r\\nWie die britische Tageszeitung „Telegraph“ in einem Porträt vom Juni 2015 schreibt, musste Erdogan 1999 wegen einer Gedicht-Rezitation ins Gefängnis. Der damalige Bürgermeister von Istanbul hatte demnach Ende 1997 bei einer Demonstration vier Zeilen aus einem Gedicht des islamistischen Dichters Ziya Gokalp vorgelesen.\\r\\nLaut „Telegraph“ heißt es in dem Gedicht unter anderem: „Die Minarette sind unsere Bajonette/und die Gläubigen unsere Soldaten“. Ein türkisches Gericht habe Erdogan daraufhin zu zehn Monaten Haft wegen „Schüren religiösen Hasses“ verurteilt, so der „Telegraph“ weiter.\",\"source_link\":\"http://www.fr.de/politik/satire-streit-erdogan-sass-selbst-wegen-gedicht-im-gefaengnis-a-363503 \",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":1,\"text\":\"Richtig\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":8,\"challenge_text\":\"Ein ZDF Redakteur packt aus: „Frau Merkel bestimmt, was wir senden dürfen.“\",\"result_text\":\"Stefan Niggemeier hat aufgedröselt, worauf sich Herles’ Aussagen der „schriftlichen Anweisung“ beziehen. Auf den Rundfunkstaatsvertrag nämlich, der die öffentlichen Sender auf nichts Anderes verpflichtet als auf die Werte des Grundgesetzes. So weit, so normal. So wie Herles das sagte klingt es freilich, als würde Angela Merkel im Kanzleramt hocken und Berichtsanweisungen an leitende ZDF-Redakteure tippen, das ist natürlich nicht der Fall!\",\"source_link\":\"http://uebermedien.de/1433/enthuellt-die-schriftlichen-anweisungen-von-oben-im-zdf/\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":2,\"text\":\"Falsch\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":9,\"challenge_text\":\"Adolf Hitler wurde 1939 für den Friedensnobelpreis nominiert\",\"result_text\":\"Adolf Hitler wurde 1939 von dem schwedischen Abgeordneten E.G.C. Brandt für den Preis nominiert, der «Brüderlichkeit unter den Nationen» und weltweite Abrüstung vorantreiben soll. Brandt zog die Nominierung später zurück und erklärte, sie sei satirisch gemeint gewesen. Die Episode zeigt, dass praktisch jedermann nominiert werden kann. Über die Aussichten, den Preis tatsächlich zu bekommen, sagt das ja noch nichts aus.\",\"source_link\":\"http://www.n-tv.de/wissen/Der-Nobelpreis-und-seine-Kuriositaeten-article16053156.html\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":1,\"text\":\"Richtig\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]},{\"id\":10,\"challenge_text\":\"Angela Merkel rauchte Anfang der 90er Jahre jeden Tag eine Schachtel Zigaretten\",\"result_text\":\"In der \\\"Bild am Sonntag\\\" erzählte die CDU-Vorsitzende und Bundeskanzlerin freimütig von ihrer Jugend in der DDR. Und auch, dass sie mit 14 Jahren ihre erste Zigarette probiert habe. „Wir hatten als Jugendliche immer Unterrichtstag in der Produktion, UTP. Sind mit dem Rad von Templin zur MTS, der maschinentechnischen Station, gefahren. Einmal hatten Freunde Zigaretten mit, die wir dann probiert haben.\",\"source_link\":\"http://www.stern.de/politik/deutschland/angela-merkel--was-sie-noch-nicht-ueber-die-kanzlerin-wussten-3909380.html\",\"information_type\":{\"id\":1,\"title\":\"Richtig/Falsch\",\"category\":{\"id\":1,\"title\":\"Fake News\"}},\"correct_answer\":{\"id\":1,\"text\":\"Richtig\"},\"answers\":[{\"id\":1,\"text\":\"Richtig\"},{\"id\":2,\"text\":\"Falsch\"}]}]}');
+</script>
+
+<div id="topLeiste"></div>
+<div class="progress">
+
+    <!--    <div class="progress-bar progress-bar-success" style="width: 35%">
+            <span class="sr-only">35% Complete (success)</span>
+        </div>-->
+    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 0%">
+        <span class="sr-only">20% Complete (warning)</span>
+    </div>
+    <!--<div class="progress-bar progress-bar-danger" style="width: 10%">
+        <span class="sr-only">10% Complete (danger)</span>
+    </div>-->
+</div>
+
+<div id="containerStart" class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-default">Start</button>
+        </div>
+    </div>
+</div>
+
+<div id="containerInformations" class="container" style="display: none">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 id="informationCount">Frage 1</h1>
+        </div>
+    </div>
+    <div class="col-xs-12" style="height:20px;"></div>
+    <div class="row">
+        <div id="challengeText" data-information-id="" class="col-xs-12">
+            <p>Renate Künast hat gesagt "Der traumatisierte Junge Flüchtling hat zwar getötet, man muss ihm aber jetzt
+                trotzdem helfen."</p>
+        </div>
+    </div>
+    <div class="col-xs-12" style="height:30px;"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button data-answer-id="" type="button" class="btn btn-default answer">Richtig</button>
+            <button data-answer-id="" type="button" class="btn btn-default answer">Falsch</button>
+        </div>
+    </div>
+    <div class="col-xs-12" style="height:30px;"></div>
+    <div id="result" style="display: none">
+        <div id="resultText" class="row">
+            <div class="col-xs-12">
+                <p>Als angebliche Quelle für das Zitat wurde die "Süddeutsche Zeitung" genannt. Künast stellte laut
+                    "Spiegel" nun Strafanzeige gegen die Macher einer rechtsnationalen Facebook-Seite sowie gegen
+                    Unbekannt.
+                    Zugleich kritisierte Künast Facebook scharf. Trotz der eindeutigen Sachlage habe es gut drei Tage
+                    gedauert, bis der Eintrag verschwunden sei. Fake News müssten künftig "umgehend nach Meldung
+                    gelöscht
+                    werden", sagte Künast dem Magazin.</p>
+            </div>
+        </div>
+        <div class="col-xs-12" style="height:30px;"></div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <button id="continue" type="button" class="btn btn-default">Weiter</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="containerFinish" class="container" style="display: none">
+    <table><tr><td></td></tr></table>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Finished</h1>
+        </div>
+    </div>
+</div>
+
+<div id="endLeiste"></div>
+
+</body>
+</html>
