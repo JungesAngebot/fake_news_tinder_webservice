@@ -19,3 +19,8 @@ json.informations do
     end
   end
 end
+json.memes do
+  json.array! quiz.informations.first.category.memes do |meme|
+    json.extract! meme, :id, :image_url, :category_id, :min_correct_including, :max_correct_excluding
+  end
+end
