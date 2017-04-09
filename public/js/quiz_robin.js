@@ -1,3 +1,5 @@
+var answeredCorrectly = 0;
+
 $(document).ready(function() {
 
     var informationIndex = 0;
