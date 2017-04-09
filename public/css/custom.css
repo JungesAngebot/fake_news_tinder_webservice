@@ -6,6 +6,7 @@ html {
 body {
     text-align: center;
     margin: 0;
+
 }
 
 .container {
@@ -34,7 +35,7 @@ body {
     width: auto;
     height: 50px;
     margin: 0 auto;      /* standardkonforme horizontale Zentrierung */
-    background-color: #71c0a4;
+    
 }
 
 #details {
