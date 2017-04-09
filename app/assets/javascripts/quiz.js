@@ -9,6 +9,7 @@ $(document).ready(function() {
         if(!information) {
             $("#containerInformations").hide();
             $("#containerFinish").show();
+            loadMeme();
         } else {
             $('#informationCount').html("Frage " + (informationIndex + 1));
             $('#challengeText').html(information.challenge_text);
@@ -17,15 +18,17 @@ $(document).ready(function() {
                 $(this).data('answer-id', information.answers[index].id);
             });
             $("#challengeText").data("information-id", information.id);
-            $('.answer').click(function (event) {
-                if ($(this).data('answer-id') == information.correct_answer.id)
+            $('.answer').bind('click', function (event) {
+                console.log("clicked");
+                if ($(this).data('answer-id') == information.correct_answer.id) {
                     answeredCorrectly++;
+                }
+                //$('.answer').unbind('click');
             });
         }
         var progress = informationIndex / quiz_json.informations.length * 100;
         $(".progress-bar").css("width", progress + "%");
         informationIndex++;
-
     }
 
     $("#containerStart").find("button").click(function(event) {

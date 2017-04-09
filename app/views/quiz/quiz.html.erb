@@ -1,6 +1,37 @@
 <script type="application/javascript">
     var quiz_json = JSON.parse('<%= escape_javascript(@quiz_json).html_safe %>');
 </script>
+<script type="text/javascript">
+    function loadMeme() {
+        var numTotal = quiz_json.informations.length;
+        var numCorrect = answeredCorrectly;
+        console.log(answeredCorrectly);
+        var finalPercentage = numCorrect / numTotal;
+        var resultIcon;
+        if(finalPercentage < 0.66)
+        {
+            resultIcon = "ice_itsfake_200.png";
+        }
+        else
+        {
+            resultIcon = "ice_itstrue_200.png";
+        }
+        var params = {percentageCorrect: finalPercentage, text: "Du hast " + numCorrect + " von " + numTotal + " richtig!", icon: resultIcon};
+        loadSvg(params);
+        var img = document.getElementById("imgMeme");
+        var memes = quiz_json.memes;
+        var memeSource;
+        for(var i = 0; i < memes.length; i++)
+        {
+            if (finalPercentage >= memes[i].min_correct_including && finalPercentage < memes[i].max_correct_excluding)
+            {
+                memeSource = memes[i].image_url.image_url.url;
+                break;
+            }
+        }
+        img.setAttribute("src", memeSource);
+    }
+</script>
 
 <div id="topLeiste"></div>
 <div class="progress">
@@ -69,12 +100,17 @@
 </div>
 
 <div id="containerFinish" class="container" style="display: none">
-  <table><tr><td></td></tr></table>
   <div class="row">
     <div class="col-xs-12">
       <h1>Finished</h1>
+      <div>
+        <img id="imgMeme" alt="Hier sollte ein dolles Meme angezeigt werden" src="">
+      </div>
+      <div align="center">
+        <div id='svgBox' align="center">
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 <div id="endLeiste"></div>
