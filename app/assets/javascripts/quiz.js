@@ -8,9 +8,14 @@ $(document).ready(function() {
             $("#containerInformations").hide();
             $("#containerFinish").show();
         } else {
+            $('#informationCount').html("Frage " + (informationIndex + 1));
             $('#challengeText').html(information.challenge_text);
             $('#resultText').html(information.result_text);
-            $('#informationCount').html("Frage " + (informationIndex + 1));
+            $('.answer').each(function (index) {
+                $(this).data('answer-id', information.answers[index].id);
+            });
+            $("#challengeText").data("information-id", information.id);
+
             var progress = informationIndex / quiz_json.informations.length * 100;
             $(".progress-bar").css("width", progress + "%");
         }
