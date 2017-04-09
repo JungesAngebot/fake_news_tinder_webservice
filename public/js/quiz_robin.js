@@ -1,3 +1,5 @@
+var answeredCorrectly = 0;
+
 $(document).ready(function() {
 
     var informationIndex = 0;
@@ -15,10 +17,13 @@ $(document).ready(function() {
                 $(this).data('answer-id', information.answers[index].id);
             });
             $("#challengeText").data("information-id", information.id);
-
-            var progress = informationIndex / quiz_json.informations.length * 100;
-            $(".progress-bar").css("width", progress + "%");
+            $('.answer').click(function (event) {
+                if ($(this).data('answer-id') == information.correct_answer.id)
+                    answeredCorrectly++;
+            });
         }
+        var progress = informationIndex / quiz_json.informations.length * 100;
+        $(".progress-bar").css("width", progress + "%");
         informationIndex++;
 
     }
