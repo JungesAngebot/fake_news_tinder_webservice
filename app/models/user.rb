@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   include Tombstoning
-  include PermissionContext
 
   has_many :devices, dependent: :destroy
 

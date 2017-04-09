@@ -1,0 +1,27 @@
+rails generate model quiz title tombstone:boolean
+rails generate model category title tombstone:boolean
+rails generate model information_type title tombstone:boolean
+rails d model information challenge_text:text result_text:text information_type:references source_link correct_answer:references category:references tombstone:boolean
+rails generate model quiz_information quiz:references information:references tombstone:boolean
+rails generate model answer text information_type:references tombstone:boolean
+rails generate model answer_given user:references quiz:references information:references answer:references tombstone:boolean
+rails generate model meme image_url category:references min_correct_including:float max_correct_excluding:float tombstone:boolean
+
+rails g fm_api_scaffold_controller quiz --api-version v1
+rails g fm_api_scaffold_controller category --api-version v1
+rails g fm_api_scaffold_controller information_type --api-version v1
+rails g fm_api_scaffold_controller answer --api-version v1
+rails d fm_api_scaffold_controller information --api-version v1
+rails g fm_api_scaffold_controller quiz_information --api-version v1
+rails g fm_api_scaffold_controller meme --api-version v1
+rails g fm_api_scaffold_controller answer_given --api-version v1
+
+rails generate fm_scaffold_controller quiz
+rails generate fm_scaffold_controller category
+rails generate fm_scaffold_controller information_type
+rails generate fm_scaffold_controller answer
+rails d fm_scaffold_controller information
+rails generate fm_scaffold_controller quiz_information
+rails generate fm_scaffold_controller meme
+rails d fm_scaffold_controller answer_given
+

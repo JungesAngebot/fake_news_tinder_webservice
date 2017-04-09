@@ -14,6 +14,6 @@
 # app.connections = 1
 # app.save!
 
-User.create(email: 'admin@fluidmobile.de', password: ENV['DEFAULT_PASSWORD'], admin: true)
-User.create(email: 'superadmin@fluidmobile.de', password: ENV['DEFAULT_PASSWORD'], admin: true, super_admin: true)
+User.create(email: 'admin@fakenewsquiz.de', password: ENV['DEFAULT_PASSWORD'], admin: true)
+User.create(email: 'superadmin@fakenewsquiz.de', password: ENV['DEFAULT_PASSWORD'], admin: true, super_admin: true)
 

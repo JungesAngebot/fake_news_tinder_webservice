@@ -1,0 +1,40 @@
+
+<div class="form-group">
+  <%= f.label :id, "#{t('Id')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.text_field :id, disabled: true , class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+
+<div class="form-group">
+  <%= f.label :title, "#{t('Title')}:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="col-xs-12 col-sm-9">
+    <div class="clearfix">
+      <%= f.text_field :title, class: "col-xs-12 col-sm-6"%>
+    </div>
+  </div>
+</div>
+<div class="space-2"></div>
+
+
+
+<div class="form-group">
+  <%= f.label :quiz_informations, "#{t('Information')}s:", class: "control-label col-xs-12 col-sm-3 no-padding-right" %>
+  <div class="clearfix">
+    <div id="information" class="col-xs-12 col-sm-9">
+      <%= f.fields_for :quiz_informations do |f_information| %>
+          <%= render 'quiz_information_fields', f: f_information %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-9 col-sm-offset-3 select2-activator">
+    <%= link_to_add_association 'Add Information', f, :quiz_informations,
+                                'data-association-insertion-node' => "#information",
+                                'data-association-insertion-method' => "append" %>
+  </div>
+</div>
+<div class="space-2"></div>

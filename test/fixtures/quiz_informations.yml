@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quiz: one
+  information: one
+  tombstone: false
+
+two:
+  quiz: two
+  information: two
+  tombstone: false

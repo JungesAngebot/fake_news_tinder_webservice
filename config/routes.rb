@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
 
+  get 'quiz/quiz'
+
   namespace :api do
     namespace :v1 do
       # only read
+      resources :quizzes
+      resources :categories
+      resources :information_types
+      resources :answers
+      resources :informations
+      resources :quiz_informations
+      resources :memes
 
       # read / write
+      resources :answer_givens
 
       # special
       # devise_for :users, controllers: { sessions: 'api/v1/sessions'}, only: 'sessions'
@@ -24,12 +34,21 @@ Rails.application.routes.draw do
 
   # admin
   namespace :admin do
+    resources :quizzes
+    resources :categories
+    resources :information_types
+    resources :answers
+    resources :informations
+    resources :quiz_informations
+    resources :memes
     resources :users
 
     # special
     get 'admin_authenticated_nothing' => 'fm_base#admin_authenticated_nothing'
     get '/' => 'fm_base#admin_authenticated_nothing', as: 'root'
   end
+
+  get 'quiz' => 'quiz#quiz'
 
   authenticate :user, lambda {|u| u.admin? || u.super_admin? } do
     apipie

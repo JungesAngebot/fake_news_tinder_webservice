@@ -1,0 +1,23 @@
+<%= form_for [:admin, @quiz_information], :html => {:class => "form-horizontal", :role => 'form'} do |f| %>
+  <% if @quiz_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quiz_information.errors.count, "error") %> prohibited this quiz_information from being saved:</h2>
+
+      <ul>
+      <% @quiz_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="space-4"></div>
+
+  <%= render partial: 'form_fields', locals: { f: f } %>
+
+  <div class="clearfix form-actions">
+    <div class="col-md-offset-3 col-md-9">
+      <button class="btn btn-info" type="submit"><i class="icon-ok bigger-110"></i> Submit</button>
+    </div>
+  </div>
+<% end %>

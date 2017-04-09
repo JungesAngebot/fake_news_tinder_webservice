@@ -6,18 +6,18 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module FluidWebservice
+module FakeNewsQuiz
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.title = 'fluid webservice'
+    config.title = 'fake news quiz webservice'
 
-    config.title_internal = 'fluid_webservice'
+    config.title_internal = 'fake_news_quiz_webservice'
 
     # must not have an underscore
-    config.app_url_scheme = 'fmapp'
+    config.app_url_scheme = 'fnquiz'
 
     config.autoload_paths += %W(#{config.root}/app/uploaders)
 
