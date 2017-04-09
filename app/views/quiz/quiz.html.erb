@@ -5,7 +5,8 @@
     function loadMeme() {
         var numTotal = quiz_json.informations.length;
         var numCorrect = answeredCorrectly;
-        console.log(answeredCorrectly);
+        if(numCorrect > numTotal)
+            numCorrect = numTotal;
         var finalPercentage = numCorrect / numTotal;
         var resultIcon;
         if(finalPercentage < 0.66)

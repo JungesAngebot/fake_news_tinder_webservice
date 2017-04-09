@@ -16,10 +16,10 @@ $(document).ready(function() {
             $('#resultText').html(information.result_text);
             $('.answer').each(function (index) {
                 $(this).data('answer-id', information.answers[index].id);
+                $(this).data('information', information.id);
             });
             $("#challengeText").data("information-id", information.id);
-            $('.answer').bind('click', function (event) {
-                console.log("clicked");
+            $('.answer[data-information="' + information.id + '"]').bind('click', function (event) {
                 if ($(this).data('answer-id') == information.correct_answer.id) {
                     answeredCorrectly++;
                 }
