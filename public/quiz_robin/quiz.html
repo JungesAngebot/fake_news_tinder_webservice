@@ -31,6 +31,8 @@
 	window.onload = function() {
 		var numTotal = quiz_json.informations.length;
 		var numCorrect = answeredCorrectly;
+		if(numCorrect > numTotal)
+		    numCorrect = numTotal;
 		var finalPercentage = numCorrect / numTotal;
 		var resultIcon;
 		if(finalPercentage < 0.66)
@@ -50,7 +52,7 @@
 		{
 			if (finalPercentage >= memes[i].min_correct_including && finalPercentage < memes[i].max_correct_excluding)
 			{
-				memeSource = "https://fakenewsquiz-sid.fluidmobile.de" + memes[i].image_url.image_url.url;
+				memeSource = memes[i].image_url.image_url.url;
 				break;
 			}
 		}
