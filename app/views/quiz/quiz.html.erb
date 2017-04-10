@@ -1,6 +1,38 @@
 <script type="application/javascript">
     var quiz_json = JSON.parse('<%= escape_javascript(@quiz_json).html_safe %>');
 </script>
+<script type="text/javascript">
+    function loadMeme() {
+        var numTotal = quiz_json.informations.length;
+        var numCorrect = answeredCorrectly;
+        if(numCorrect > numTotal)
+            numCorrect = numTotal;
+        var finalPercentage = numCorrect / numTotal;
+        var resultIcon;
+        if(finalPercentage < 0.66)
+        {
+            resultIcon = "ice_itsfake_200.png";
+        }
+        else
+        {
+            resultIcon = "ice_itstrue_200.png";
+        }
+        var params = {percentageCorrect: finalPercentage, text: "Du hast " + numCorrect + " von " + numTotal + " richtig!", icon: resultIcon};
+        loadSvg(params);
+        var img = document.getElementById("imgMeme");
+        var memes = quiz_json.memes;
+        var memeSource;
+        for(var i = 0; i < memes.length; i++)
+        {
+            if (finalPercentage >= memes[i].min_correct_including && finalPercentage < memes[i].max_correct_excluding)
+            {
+                memeSource = memes[i].image_url.image_url.url;
+                break;
+            }
+        }
+        img.setAttribute("src", memeSource);
+    }
+</script>
 
 <div id="topLeiste"></div>
 <div class="progress">
@@ -32,49 +64,80 @@
   </div>
   <div class="col-xs-12" style="height:20px;"></div>
   <div class="row">
-    <div id="challengeText" data-information-id="" class="col-xs-12">
-      <p>Renate Künast hat gesagt "Der traumatisierte Junge Flüchtling hat zwar getötet, man muss ihm aber jetzt
+    <div id="challengeText" data-information-id="" class="col-xs-12" style="height: 245px;">
+      <p>Renate KÃ¼nast hat gesagt "Der traumatisierte Junge FlÃ¼chtling hat zwar getÃ¶tet, man muss ihm aber jetzt
         trotzdem helfen."</p>
     </div>
   </div>
   <div class="col-xs-12" style="height:30px;"></div>
   <div class="row">
     <div class="col-xs-12">
-      <button data-answer-id="" type="button" class="btn btn-default answer">Richtig</button>
-      <button data-answer-id="" type="button" class="btn btn-default answer">Falsch</button>
-    </div>
-  </div>
-  <div class="col-xs-12" style="height:30px;"></div>
-  <div id="result" style="display: none">
-    <div id="resultText" class="row">
       <div class="col-xs-12">
-        <p>Als angebliche Quelle für das Zitat wurde die "Süddeutsche Zeitung" genannt. Künast stellte laut
-          "Spiegel" nun Strafanzeige gegen die Macher einer rechtsnationalen Facebook-Seite sowie gegen
-          Unbekannt.
-          Zugleich kritisierte Künast Facebook scharf. Trotz der eindeutigen Sachlage habe es gut drei Tage
-          gedauert, bis der Eintrag verschwunden sei. Fake News müssten künftig "umgehend nach Meldung
-          gelöscht
-          werden", sagte Künast dem Magazin.</p>
+        <button data-answer-id="" type="button" class="btn btn-default answer" style= " background-color: #71c0a4;
+            border: none;
+            color: #e7cd8a;
+            padding: 9px 58px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 36px;">True</button>
+        <button data-answer-id="" type="button" class="btn btn-default answer" style= "background-color: #ee7a79;
+            border: none;
+            color: #7869aa;
+            padding: 9px 58px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 36px;">Fake</button>
+      </div>
+    </div>
+    <div class="col-xs-12" style="height:30px;"></div>
+    <div id="result" style="display: none">
+      <div id="resultText" class="row">
+        <div class="col-xs-12">
+          <p>Als angebliche Quelle fÃ¼r das Zitat wurde die "SÃ¼ddeutsche Zeitung" genannt. KÃ¼nast stellte laut
+            "Spiegel" nun Strafanzeige gegen die Macher einer rechtsnationalen Facebook-Seite sowie gegen
+            Unbekannt.
+            Zugleich kritisierte KÃ¼nast Facebook scharf. Trotz der eindeutigen Sachlage habe es gut drei Tage
+            gedauert, bis der Eintrag verschwunden sei. Fake News mÃ¼ssten kÃ¼nftig "umgehend nach Meldung
+            gelÃ¶scht
+            werden", sagte KÃ¼nast dem Magazin.</p>
+        </div>
+      </div>
+      <div class="col-xs-12" style="height:30px;"></div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button id="continue" type="button" class="btn btn-default" style="background-color: #7869aa;
+              border: none;
+              color: #e7cd8a;
+              padding: 9px 58px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 36px;">Next</button>
+        </div>
       </div>
     </div>
     <div class="col-xs-12" style="height:30px;"></div>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <button id="continue" type="button" class="btn btn-default">Weiter</button>
-      </div>
-    </div>
+
   </div>
 
 </div>
 
 <div id="containerFinish" class="container" style="display: none">
-  <table><tr><td></td></tr></table>
   <div class="row">
     <div class="col-xs-12">
       <h1>Finished</h1>
+      <div>
+        <img id="imgMeme" alt="Hier sollte ein dolles Meme angezeigt werden" src="">
+      </div>
+      <div align="center">
+        <div id='svgBox' align="center">
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 <div id="endLeiste"></div>

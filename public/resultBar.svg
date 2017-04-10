@@ -1,0 +1,7 @@
+<svg width="600" height="300">
+  <rect id="redBar" x="150" y="45" width="400" height="45" fill="#ee7a79" stroke-width="0"/>
+  <rect id="greenBar" x="150" y="45" width="100" height="45" fill="#71c0a4" stroke-width="0"/>
+  <!-- <rect id="fancyCircle" cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/> -->
+  <text id="mainText" x="150" y="130" fill="black" font-family="Open Sans" font-size="35">Kein Text gefunden</text>
+  <image id="icon" xlink:href="ice_itstrue_200.png" x="0" y="-45" height="200" width="200" transform="rotate(25)">
+</svg>
